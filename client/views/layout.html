@@ -5,12 +5,7 @@
 </template>
 
 <template name="introLayout">
-  <form class="login">
-    <input type="text" placeholder="username"/>
-    <input type="text" placeholder="password"/>
-    <button id="submit">Login</button>
-  </form>
-  <button id="sign-up">Sign up!</button>
+  {{> loginButtons }}
 </template>
 
 <template name="dashboardLayout">
