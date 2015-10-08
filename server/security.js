@@ -1,4 +1,4 @@
-// Posts.allow({
+// Meteor.users.allow({
 //   'insert' : function (userId,doc) {
 //     /* user and doc checks ,
 //     return true to allow insert */
