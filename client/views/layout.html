@@ -27,8 +27,15 @@
   <form class="edit">
     <input type="text" placeholder="username">
     <input type="text" placeholder="password">
-    <button id="saveChanges">Save</button>
+    <button id="save-changes">Save</button>
   </form>
 </template>
 
-<template name="newTaskLayout"></template>
+<template name="newTaskLayout">
+  <h2>Create New Task</h2>
+  <form class="task">
+    Title: <input type="text">
+    Description: <input type="text">
+  </form>
+  <button id="save-task">Save</button>
+</template>

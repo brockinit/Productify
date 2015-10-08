@@ -28,3 +28,8 @@ Router.route('/profile/edit/:username', function() {
     }
   });
 });
+
+Router.route('/newtask', function () {
+  //will render in {{> yield }} block
+  this.render('newTaskLayout');
+});
