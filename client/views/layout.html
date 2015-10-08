@@ -13,7 +13,14 @@
   <button id="sign-up">Sign up!</button>
 </template>
 
-<template name="dashboardLayout"></template>
+<template name="dashboardLayout">
+  <h2>Ello there, {{username}}</h2>
+  <button id="new-task">+</button>
+  <button id="user-profile">View profile</button>
+  <div id="to-do"></div>
+  <div class="in-progress"></div>
+  <div class="done"></div>
+</template>
 
 <template name="profileLayout"></template>
 
