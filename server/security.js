@@ -10,3 +10,9 @@ Tasks.allow({
     return (userId === Meteor.userId);
   }
 });
+
+Meteor.users.allow({
+  'update' : function (userId, doc) {
+    return true;
+  }
+});
