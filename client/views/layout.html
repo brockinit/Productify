@@ -5,23 +5,25 @@
 </template>
 
 <template name="introLayout">
-  <form class="login">
-    <input type="text" placeholder="username"/>
-    <input type="text" placeholder="password"/>
-    <button id="submit">Login</button>
+  {{> loginButtons }}
+</template>
+
+<template name="profileLayout">
+  <h2>Edit Info</h2>
+  <form class="edit">
+    <input type="text" id="username" placeholder="username">
+    <input type="text" id="password" placeholder="password">
+    <button id="save-changes">Save</button>
+    <button class="cancel">Back to Dashboard</button>
   </form>
-  <button id="sign-up">Sign up!</button>
 </template>
 
-<template name="dashboardLayout">
-  <h2>Ello there, {{username}}</h2>
-  <button id="new-task">+</button>
-  <button id="user-profile">View profile</button>
-  <div id="to-do"></div>
-  <div class="in-progress"></div>
-  <div class="done"></div>
+<template name="newTaskLayout">
+  <h2>Create New Task</h2>
+  <form class="task">
+    Title: <input type="text" id="title-input">
+    Description: <input type="text" id="description-input">
+  </form>
+  <button id="save-task">Save</button>
+  <button class="cancel">Back to Dashboard</button>
 </template>
-
-<template name="profileLayout"></template>
-
-<template name="newTaskLayout"></template>
