@@ -5,12 +5,7 @@
 </template>
 
 <template name="introLayout">
-  <form class="login">
-    <input type="text" placeholder="username"/>
-    <input type="text" placeholder="password"/>
-    <button id="submit">Login</button>
-  </form>
-  <button id="sign-up">Sign up!</button>
+  {{> loginButtons }}
 </template>
 
 <template name="dashboardLayout">
@@ -22,6 +17,20 @@
   <div class="done"></div>
 </template>
 
-<template name="profileLayout"></template>
+<template name="profileLayout">
+  <h2>Edit Info</h2>
+  <form class="edit">
+    <input type="text" placeholder="username">
+    <input type="text" placeholder="password">
+    <button id="save-changes">Save</button>
+  </form>
+</template>
 
-<template name="newTaskLayout"></template>
+<template name="newTaskLayout">
+  <h2>Create New Task</h2>
+  <form class="task">
+    Title: <input type="text">
+    Description: <input type="text">
+  </form>
+  <button id="save-task">Save</button>
+</template>
