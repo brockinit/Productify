@@ -7,9 +7,24 @@ Router.route('/', function () {
   this.render('introLayout');
 });
 
-Router.route('/dashboard', function () {
+Router.route('/dashboard/:username', function () {
   //will render in {{> yield }} block
-  this.render('dashboardLayout');
+  this.render('dashboardLayout', {
+    data : function() {
+      return {
+        username : this.params.username
+      };
+    }
+  });
 });
 
+Router.route('/profile/edit/:username', function() {
 
+  this.render('profileLayout', {
+    data : function() {
+      return {
+        username : this.params.username
+      };
+    }
+  });
+});
