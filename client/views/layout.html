@@ -21,8 +21,8 @@
 <template name="profileLayout">
   <h2>Edit Info</h2>
   <form class="edit">
-    <input type="text" placeholder="username">
-    <input type="text" placeholder="password">
+    <input type="text" id="username" placeholder="username">
+    <input type="text" id="password" placeholder="password">
     <button id="save-changes">Save</button>
     <button class="cancel">Back to Dashboard</button>
   </form>
@@ -31,8 +31,8 @@
 <template name="newTaskLayout">
   <h2>Create New Task</h2>
   <form class="task">
-    Title: <input type="text">
-    Description: <input type="text">
+    Title: <input type="text" id="title-input">
+    Description: <input type="text" id="description-input">
   </form>
   <button id="save-task">Save</button>
   <button class="cancel">Back to Dashboard</button>

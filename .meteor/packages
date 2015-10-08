@@ -3,3 +3,4 @@ iron:router
 accounts-ui
 standard-minifiers
 accounts-password
+accounts-base
