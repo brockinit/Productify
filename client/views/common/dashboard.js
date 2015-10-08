@@ -41,10 +41,11 @@ Template.dashboardLayout.events({
     event.preventDefault();
     Meteor.logout();
     Router.go('/');
-  },
+  }
+  ,
   'click #up' : function(event, template) {
     event.preventDefault();
-    var thingy = Tasks.find({ title : 'heyyy' });
+    var thingy = Tasks.findOne({ title : 'thirty' });
     Tasks.update({ _id : thingy._id }, { $set : { loc : 2 } });
   }
 });
