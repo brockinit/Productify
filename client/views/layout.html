@@ -1,9 +1,20 @@
-<template name='intro'>
+<template name='applicationLayout'>
   <h1>Welcome to KanBan!</h1>
+  {{> yield}}
+  <footer></footer>
 </template>
 
-<template name="dashboard"></template>
+<template name="introLayout">
+  <form class="login">
+    <input type="text" placeholder="username"/>
+    <input type="text" placeholder="password"/>
+    <button id="submit">Login</button>
+  </form>
+  <button id="sign-up">Sign up!</button>
+</template>
 
-<template name="profile"></template>
+<template name="dashboardLayout"></template>
 
-<template name="newTask"></template>
+<template name="profileLayout"></template>
+
+<template name="newTaskLayout"></template>
