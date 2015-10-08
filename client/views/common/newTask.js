@@ -19,7 +19,7 @@ Template.newTaskLayout.events({
     event.preventDefault();
     var titleInput = $('#title-input').val();
     var descriptionInput = $('#description-input').val();
-    Tasks.insert({ title : titleInput, description : descriptionInput, loc : 'To Do' });
+    Tasks.insert({ title : titleInput, description : descriptionInput, loc : 1 });
     console.log(Tasks.find().fetch());
   }
 });

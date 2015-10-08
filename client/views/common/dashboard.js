@@ -12,8 +12,19 @@ Template.dashboardLayout.destroyed = function() {
 
 Template.todotasks.helpers({
   dash : function () {
-    console.log('hiiii');
-    return Tasks.find();
+    return Tasks.find({ loc : 1 });
+  }
+});
+
+Template.inprogresstasks.helpers({
+  dash : function () {
+    return Tasks.find({ loc : 2 });
+  }
+});
+
+Template.donetasks.helpers({
+  dash : function () {
+    return Tasks.find({ loc : 3 });
   }
 });
 
@@ -30,5 +41,10 @@ Template.dashboardLayout.events({
     event.preventDefault();
     Meteor.logout();
     Router.go('/');
+  },
+  'click #up' : function(event, template) {
+    event.preventDefault();
+    var thingy = Tasks.find({ title : 'heyyy' });
+    Tasks.update({ _id : thingy._id }, { $set : { loc : 2 } });
   }
 });

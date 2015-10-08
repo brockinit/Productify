@@ -3,14 +3,37 @@
   <button id="new-task">+</button>
   <button id="user-profile">View profile</button>
   <button id="log-out">Log Out</button>
+  <button id="up">up</button>
+  <button id="down">down</button>
+
   <div id="the-do">
     {{> todotasks}}
   </div>
-  <div class="in-progress"></div>
-  <div class="done"></div>
+  <div class="in-progress">
+    {{> inprogresstasks}}
+  </div>
+  <div class="done">
+    {{> donetasks}}
+  </div>
 </template>
 
 <template name="todotasks">
+  <div id="theFunction">
+  {{#each dash}}
+  {{> task}}
+    {{/each}}
+    </div>
+</template>
+
+<template name="inprogresstasks">
+  <div id="theFunction">
+  {{#each dash}}
+  {{> task}}
+    {{/each}}
+    </div>
+</template>
+
+<template name="donetasks">
   <div id="theFunction">
   {{#each dash}}
   {{> task}}
