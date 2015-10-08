@@ -1,7 +1,7 @@
-Meteor.publish( "users", function() {
+Meteor.publish( 'users', function() {
   return Users.find();
 });
 
-Meteor.publish( "tasks", function() {
+Meteor.publish( 'tasks', function() {
   return Tasks.find();
 });
