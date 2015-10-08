@@ -11,8 +11,8 @@ Template.introLayout.destroyed = function() {
 }
 
 Template.introLayout.events({
-  'click submit' : function(event, template) {
+  'click #login-buttons-password' : function(event, template) {
     event.preventDefault();
-    Users.find(this._id);
+    Router.go('/dashboard/:username');
   }
 });
