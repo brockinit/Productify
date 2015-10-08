@@ -1,0 +1,26 @@
+<template name="dashboardLayout">
+  <h2>Ello there, {{currentUser.username}}</h2>
+  <button id="new-task">+</button>
+  <button id="user-profile">View profile</button>
+  <button id="log-out">Log Out</button>
+  <div id="the-do">
+    {{> todotasks}}
+  </div>
+  <div class="in-progress"></div>
+  <div class="done"></div>
+</template>
+
+<template name="todotasks">
+  <div id="theFunction">
+  {{#each dash}}
+  {{> task}}
+    {{/each}}
+    </div>
+</template>
+
+<template name="task">
+<div id="this-task">
+{{title}} {{description}}
+</div>
+</template>
+

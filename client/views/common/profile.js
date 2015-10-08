@@ -22,6 +22,5 @@ Template.profileLayout.events({
     //Accounts.setUsername(Meteor.userId(), userInput);
     //console.log(Accounts.setUsername(Meteor.user()._id, userInput));
     //console.log(Meteor.user().username);
-
   }
 });

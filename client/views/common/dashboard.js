@@ -10,6 +10,13 @@ Template.dashboardLayout.destroyed = function() {
 
 }
 
+Template.todotasks.helpers({
+  dash : function () {
+    console.log('hiiii');
+    return Tasks.find();
+  }
+});
+
 Template.dashboardLayout.events({
   'click #user-profile' : function(event, template) {
     event.preventDefault();
