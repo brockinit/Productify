@@ -8,6 +8,10 @@ Tasks.allow({
     /* user and doc checks ,
     return true to allow update */
     return true;
+  },
+  'remove' : function(userId, doc) {
+
+    return true;
   }
 });
 
