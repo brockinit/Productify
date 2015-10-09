@@ -4,46 +4,107 @@
   <button id="user-profile">View profile</button>
   <button id="log-out">Log Out</button>
   <button id="up">up</button>
-  <button id="down">down</button>
 
-  <div id="the-do">
-    {{> todotasks}}
-  </div>
-  <div class="in-progress">
-    {{> inprogresstasks}}
-  </div>
-  <div class="done">
-    {{> donetasks}}
+  <div class="ui stackable very relaxed grid container">
+    <div class="three column computer one column mobile demo row">
+
+      <div class="column">
+        <div class="container the-do">
+          {{> todotasks}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="container in-progress">
+          {{> inprogresstasks}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="container done">
+          {{> donetasks}}
+       </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <template name="todotasks">
-  <div id="theFunction">
+  <div class="ui cards">
   {{#each dash}}
-  {{> task}}
-    {{/each}}
+    {{> task1}}
+  {{/each}}
     </div>
 </template>
 
 <template name="inprogresstasks">
-  <div id="theFunction">
+  <div class="ui cards">
   {{#each dash}}
-  {{> task}}
-    {{/each}}
+    {{> task2}}
+  {{/each}}
     </div>
 </template>
 
 <template name="donetasks">
-  <div id="theFunction">
+  <div class="ui cards">
   {{#each dash}}
-  {{> task}}
-    {{/each}}
+    {{> task3}}
+  {{/each}}
     </div>
 </template>
 
-<template name="task">
-<div id="this-task">
-{{title}} {{description}}
-</div>
+<template name="task1">
+  <a class="red card">
+
+    <div class="content">
+      <div class="header">
+        {{title}}
+      </div>
+      <div class="description">
+        {{description}}
+      </div>
+    </div>
+
+    <div class="ui bottom attached button nextStage">
+      <i class="add icon"></i>
+      Next Stage
+    </div>
+  </a>
 </template>
 
+<template name="task2">
+  <a class="yellow card">
+
+    <div class="content">
+      <div class="header">
+        {{title}}
+      </div>
+      <div class="description">
+        {{description}}
+      </div>
+    </div>
+
+    <div class="ui bottom attached button nextStage">
+      <i class="add icon"></i>
+      Next Stage
+    </div>
+  </a>
+</template>
+
+<template name="task3">
+  <a class="green card">
+
+    <div class="content">
+      <div class="header">
+        {{title}}
+      </div>
+      <div class="description">
+        {{description}}
+      </div>
+    </div>
+
+    <div class="ui bottom attached button nextStage">
+      <i class="add icon"></i>
+      Delete
+    </div>
+  </a>
+</template>

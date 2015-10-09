@@ -41,10 +41,26 @@ Template.dashboardLayout.events({
     event.preventDefault();
     Meteor.logout();
     Router.go('/');
-  },
-  'click #up' : function(event, template) {
+  }
+});
+
+Template.task1.events({
+  'click .nextStage' : function(event, template) {
     event.preventDefault();
-    var thingy = Tasks.find({ title : 'heyyy' });
-    Tasks.update({ _id : thingy._id }, { $set : { loc : 2 } });
+    Tasks.update( {_id : this._id}, { $set : { loc : 2 }});
+  }
+});
+
+Template.task2.events({
+  'click .nextStage' : function(event, template) {
+    event.preventDefault();
+    Tasks.update( {_id : this._id}, { $set : { loc : 3 }});
+  }
+});
+
+Template.task3.events({
+  'click .nextStage' : function(event, template) {
+    event.preventDefault();
+    Tasks.remove( {_id : this._id} );
   }
 });
