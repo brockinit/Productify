@@ -1,5 +1,6 @@
 Template.dashboardLayout.rendered = function() {
-
+  // $('.test.modal')
+  // .modal('attach events', '.test.button', 'show');
 }
 
 Template.dashboardLayout.created = function() {
@@ -47,20 +48,23 @@ Template.dashboardLayout.events({
 Template.task1.events({
   'click .nextStage' : function(event, template) {
     event.preventDefault();
-    Tasks.update( {_id : this._id}, { $set : { loc : 2 }});
+    Tasks.update( { _id : this._id }, { $set : { loc : 2 } });
   }
 });
 
 Template.task2.events({
   'click .nextStage' : function(event, template) {
     event.preventDefault();
-    Tasks.update( {_id : this._id}, { $set : { loc : 3 }});
+    Tasks.update( { _id : this._id }, { $set : { loc : 3 }} );
   }
 });
 
 Template.task3.events({
   'click .nextStage' : function(event, template) {
     event.preventDefault();
-    Tasks.remove( {_id : this._id} );
+    Tasks.remove( { _id : this._id } );
   }
 });
+
+
+

@@ -1,6 +1,5 @@
 standard-app-packages
 iron:router
-accounts-ui
 standard-minifiers
 accounts-password
 accounts-base
@@ -8,3 +7,7 @@ useraccounts:core
 semantic:ui
 flemay:less-autoprefixer
 semantic:ui-data
+semantic:ui-modal
+useraccounts:semantic-ui
+useraccounts:iron-routing
+accounts-ui
