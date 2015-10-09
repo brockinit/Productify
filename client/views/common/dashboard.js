@@ -42,10 +42,12 @@ Template.dashboardLayout.events({
     Meteor.logout();
     Router.go('/');
   }
-  ,
-  'click #up' : function(event, template) {
+});
+
+Template.task.events({
+  'click .nextStage' : function(event, template) {
     event.preventDefault();
-    var thingy = Tasks.findOne({ title : 'something' });
-    Tasks.update({ _id : thingy._id }, { $set : { loc : 2 } });
+    // var tmp = $('.header').
+    // Tasks.findOne();
   }
 });

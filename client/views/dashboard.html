@@ -29,32 +29,82 @@
 </template>
 
 <template name="todotasks">
-  <div id="theFunction">
+  <div class="ui cards">
   {{#each dash}}
-  {{> task}}
-    {{/each}}
+    {{> task1}}
+  {{/each}}
     </div>
 </template>
 
 <template name="inprogresstasks">
-  <div id="theFunction">
+  <div class="ui cards">
   {{#each dash}}
-  {{> task}}
+  {{> task2}}
     {{/each}}
     </div>
 </template>
 
 <template name="donetasks">
-  <div id="theFunction">
+  <div class="ui cards">
   {{#each dash}}
-  {{> task}}
+  {{> task3}}
     {{/each}}
     </div>
 </template>
 
-<template name="task">
-<div id="this-task">
-{{title}} {{description}}
-</div>
+<template name="task1">
+  <a class="red card">
+
+    <div class="content">
+      <div class="header">
+        {{title}}
+      </div>
+      <div class="description">
+        {{description}}
+      </div>
+    </div>
+
+    <div class="ui bottom attached button nextStage">
+      <i class="add icon"></i>
+      Next Stage
+    </div>
+  </a>
 </template>
 
+<template name="task2">
+  <a class="yellow card">
+
+    <div class="content">
+      <div class="header">
+        {{title}}
+      </div>
+      <div class="description">
+        {{description}}
+      </div>
+    </div>
+
+    <div class="ui bottom attached button nextStage">
+      <i class="add icon"></i>
+      Next Stage
+    </div>
+  </a>
+</template>
+
+<template name="task3">
+  <a class="green card">
+
+    <div class="content">
+      <div class="header">
+        {{title}}
+      </div>
+      <div class="description">
+        {{description}}
+      </div>
+    </div>
+
+    <div class="ui bottom attached button nextStage">
+      <i class="add icon"></i>
+      Next Stage
+    </div>
+  </a>
+</template>
