@@ -32,7 +32,7 @@ Template.donetasks.helpers({
 Template.dashboardLayout.events({
   'click #user-profile' : function(event, template) {
     event.preventDefault();
-    Router.go('/profile/edit/:username');
+    Router.go('/profile/edit/');
   },
   'click #new-task' : function(event, template) {
     event.preventDefault();

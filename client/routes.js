@@ -2,12 +2,16 @@ Router.configure({
   layoutTemplate : 'applicationLayout'
 });
 
+AccountsTemplates.configure({
+  defaultLayout : 'introLayout'
+});
+
 Router.route('/', function () {
   //will render in {{> yield }} block
   this.render('introLayout');
 });
 
-Router.route('/dashboard/:username', function () {
+Router.route('/dashboard/', function () {
   //will render in {{> yield }} block
   this.render('dashboardLayout', {
     data : function() {
@@ -18,7 +22,7 @@ Router.route('/dashboard/:username', function () {
   });
 });
 
-Router.route('/profile/edit/:username', function() {
+Router.route('/profile/edit/', function() {
 
   this.render('profileLayout', {
     data : function() {
