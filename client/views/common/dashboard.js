@@ -1,6 +1,5 @@
 Template.dashboardLayout.rendered = function() {
-  // $('.test.modal')
-  // .modal('attach events', '.test.button', 'show');
+
 }
 
 Template.dashboardLayout.created = function() {
@@ -36,7 +35,8 @@ Template.dashboardLayout.events({
   },
   'click #new-task' : function(event, template) {
     event.preventDefault();
-    Router.go('/newtask');
+    $('.ui.test.modal')
+    .modal('attach events', '#new-task', 'show', 'set active', 'can fit');
   },
   'click #log-out' : function(event, template) {
     event.preventDefault();

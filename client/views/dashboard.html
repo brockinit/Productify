@@ -4,12 +4,12 @@
         <div class="ui inverted huge header">
           Ello there, {{currentUser.username}}
         </div>
-      </div>
-      <div class="center item">
-        <a class="ui inverted blue button" id="user-profile">
+        <a class="ui inverted blue button center aligned" id="user-profile">
           Profile
         </a>
-        <a class="ui inverted blue button" id="log-out">
+      </div>
+      <div class="center item">
+        <a class="ui inverted blue button center aligned" id="log-out">
           Log out
         </a>
       </div>
@@ -20,6 +20,25 @@
       </div>
   </div>
   <div id="content">
+  <!--modal-->
+  <div class="ui test modal">
+  <i class="close icon"></i>
+  <div class="header">
+    New Task
+  </div>
+  <div class="image content">
+    <div class="title">
+      Title
+    </div>
+    <div class="description">
+      Description
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui button">Cancel</div>
+    <div class="ui button">OK</div>
+  </div>
+</div><!--end modal-->
     <div class="ui stackable very relaxed grid container">
       <div class="three column computer one column mobile demo row">
 
