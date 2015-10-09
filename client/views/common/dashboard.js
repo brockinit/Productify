@@ -45,7 +45,7 @@ Template.dashboardLayout.events({
   ,
   'click #up' : function(event, template) {
     event.preventDefault();
-    var thingy = Tasks.findOne({ title : 'thirty' });
+    var thingy = Tasks.findOne({ title : 'something' });
     Tasks.update({ _id : thingy._id }, { $set : { loc : 2 } });
   }
 });

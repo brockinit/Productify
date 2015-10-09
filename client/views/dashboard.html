@@ -4,16 +4,27 @@
   <button id="user-profile">View profile</button>
   <button id="log-out">Log Out</button>
   <button id="up">up</button>
-  <button id="down">down</button>
 
-  <div class="container the-do">
-    {{> todotasks}}
-  </div>
-  <div class="container in-progress">
-    {{> inprogresstasks}}
-  </div>
-  <div class="container done">
-    {{> donetasks}}
+  <div class="ui stackable very relaxed grid container">
+    <div class="three column computer one column mobile demo row">
+
+      <div class="column">
+        <div class="container the-do">
+          {{> todotasks}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="container in-progress">
+          {{> inprogresstasks}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="container done">
+          {{> donetasks}}
+       </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
