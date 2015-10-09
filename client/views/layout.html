@@ -1,29 +1,30 @@
 <template name='applicationLayout'>
-  <h1>Welcome to KanBan!</h1>
-  {{> yield}}
-  <footer></footer>
+    <h2 class="ui center aligned icon header">
+    <i class="tasks icon"></i>
+      Productify
+    </h2>
+    {{> yield}}
+    <div class="ui inverted vertical footer segment form-page">
+      <div class="ui">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="five wide column">
+            <h3>About</h3>
+          </div>
+          <div class="six wide column">
+          <i class="github alternate icon"></i>
+            <h3>GitHub</h3>
+          </div>
+          <div class="five wide column">
+            <h3>Contact</h3>
+          </div>
+        </div>
+      </div>
+    </div>
 </template>
 
 <template name="introLayout">
-  {{> loginButtons }}
+  <div id="login">
+    {{> loginButtons}}
+  </div>
 </template>
 
-<template name="profileLayout">
-  <h2>Edit Info</h2>
-  <form class="edit">
-    <input type="text" id="username" placeholder="username">
-    <input type="text" id="password" placeholder="password">
-    <button id="save-changes">Save</button>
-    <button class="cancel">Back to Dashboard</button>
-  </form>
-</template>
-
-<template name="newTaskLayout">
-  <h2>Create New Task</h2>
-  <form class="task">
-    Title: <input type="text" id="title-input">
-    Description: <input type="text" id="description-input">
-  </form>
-  <button id="save-task">Save</button>
-  <button class="cancel">Back to Dashboard</button>
-</template>
