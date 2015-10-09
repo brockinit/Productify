@@ -1,28 +1,41 @@
 <template name="dashboardLayout">
-  <h2>Ello there, {{currentUser.username}}</h2>
-  <button id="new-task">+</button>
-  <button id="user-profile">View profile</button>
-  <button id="log-out">Log Out</button>
-  <div class="ui stackable very relaxed grid container">
-    <div class="three column computer one column mobile demo row">
+  <div class="ui large secondary inverted pointing menu">
+    <div class="left item">
+      <div class="ui huge header">Ello there, {{currentUser.username}}</div>
+      <a class="ui primary button" id="user-profile">
+        Profile
+      </a>
+      <a class="ui button" id="log-out">
+        Log out
+      </a>
+    </div>
+    <div class="right item">
+      <a class="ui icon huge green button" id="new-task">
+        <i class="add icon"></i>
+      </a>
+    </div>
+    </div>
+  <div id="content">
+    <div class="ui stackable very relaxed grid container">
+      <div class="three column computer one column mobile demo row">
 
-      <div class="column">
-        <div class="container the-do">
-          {{> todotasks}}
+        <div class="column">
+          <div class="container the-do">
+            {{> todotasks}}
+          </div>
         </div>
-      </div>
-      <div class="column">
-        <div class="container in-progress">
-          {{> inprogresstasks}}
+        <div class="column">
+          <div class="container in-progress">
+            {{> inprogresstasks}}
+          </div>
         </div>
-      </div>
-      <div class="column">
-        <div class="container done">
-          {{> donetasks}}
-       </div>
+        <div class="column">
+          <div class="container done">
+            {{> donetasks}}
+         </div>
+        </div>
       </div>
     </div>
-
   </div>
 </template>
 

@@ -32,6 +32,12 @@ h3 {
   width: 100%;
 }
 
-.six.wide.column {
-  display: inline;
+#new-task {
+  float: right;
+  padding: 5px;
 }
+
+#content {
+  padding: 10px;
+}
+
