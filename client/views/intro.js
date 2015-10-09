@@ -12,13 +12,13 @@ Template.introLayout.destroyed = function() {
 
 
 
-Accounts.ui.config({
-  passwordSignupFields : 'USERNAME_ONLY'
-});
+// Accounts.ui.config({
+//   passwordSignupFields : 'USERNAME_ONLY'
+// });
 
 
 Template.introLayout.events({
-  'click #login-buttons-password' : function(event, template) {
+  'click #at-btn' : function(event, template) {
     event.preventDefault();
     Router.go('/dashboard/:username');
   }
