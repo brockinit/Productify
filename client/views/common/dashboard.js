@@ -35,13 +35,19 @@ Template.dashboardLayout.events({
   },
   'click #new-task' : function(event, template) {
     event.preventDefault();
-    $('.ui.test.modal')
+    $('.ui.task.modal')
     .modal('attach events', '#new-task', 'show', 'set active', 'can fit');
   },
   'click #log-out' : function(event, template) {
     event.preventDefault();
     Meteor.logout();
     Router.go('/');
+  },
+  'click #save-task' : function(event, template) {
+    //event.preventDefault();
+    var titleInput = $('#title-input').val();
+    var descriptionInput = $('#description-input').val();
+    Tasks.insert({ title : titleInput, description : descriptionInput, loc : 1 });
   }
 });
 
