@@ -17,17 +17,13 @@ body {
   height: 80%;
 }
 
-footer {
-  height: 5%;
-  border-top: 1px solid black;
-}
-
 h3 {
   text-align: center;
 }
 
 .footer.form-page {
   position: absolute !important;
+  height: 8%;
   bottom: 0;
   width: 100%;
 }

@@ -13,7 +13,7 @@ Template.newTaskLayout.destroyed = function() {
 Template.newTaskLayout.events({
   'click .cancel' : function(event, template) {
     event.preventDefault();
-    Router.go('/dashboard/:username');
+    Router.go('/dashboard');
   },
   'click #save-task' : function(event, template) {
     event.preventDefault();
