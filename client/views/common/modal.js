@@ -20,6 +20,6 @@ Template.modal.destroyed = function() {
 Template.modal.events({
   'click #new-task' : function(event, template) {
     event.preventDefault();
-    $('.ui.task.modal').modal('attach events', '#new-task', 'show');
+    $('.ui.task.modal').modal('show');
   }
 });

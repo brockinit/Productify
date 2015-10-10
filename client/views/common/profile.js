@@ -18,7 +18,12 @@ Template.profileLayout.events({
   'click #save-changes' : function(event, template) {
     event.preventDefault();
     var userInput = $('#username').val();
-    Meteor.users.update({ _id : Meteor.userId() }, { $set : { username : userInput } });
-    Router.go('/dashboard/');
+    if (typeof (userInput) === 'string' && userInput.length > 0) {
+      Meteor.users.update({ _id : Meteor.userId() }, { $set : { username : userInput } });
+      Router.go('/dashboard/');
+    }
+    else {
+      confirm('Please enter a new username');
+    }
   }
 });
