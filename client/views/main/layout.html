@@ -1,30 +1,17 @@
+<head>
+  <title>KanBan</title>
+  <link href='https://fonts.googleapis.com/css?family=Exo:400,800italic,200' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+</body>
+
 <template name='applicationLayout'>
     <div class="page-wrap">
       {{> yield}}
     </div>
     {{> footer}}
-</template>
-
-<template name="introLayout">
-
-  <div class="ui inverted vertical masthead center aligned segment">
-    <div class="ui fluid image">
-      <img src="https://static.pexels.com/photos/425/apple-iphone-desk-office.jpg" class="landing-page" alt="cool hipster stuff">
-    </div>
-    {{> header}}
-    <div class="ui inverted button scroll-force">
-      Start
-    </div>
-  </div>
-  <div class="ui vertical stripe segment">
-    <div class="ui middle aligned center aligned grid">
-      <div class="column">
-          <div class="ui container">
-            {{> atForm}}
-          </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <template name="footer">
