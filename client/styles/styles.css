@@ -71,3 +71,7 @@ html, body{
 .landing-page {
   height: 72% !important;
 }
+
+.taskHeader{
+  text-align: center;
+}
