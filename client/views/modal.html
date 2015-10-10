@@ -4,22 +4,27 @@
   </div>
   <!--modal-->
   <div class="ui task modal">
-  <i class="close icon"></i>
-  <div class="header">
-    New Task
-  </div>
-  <div class="content">
-    <div class="title">
-      Title:
-      <input type="text" id="title-input">
+    <i class="close icon"></i>
+    <div class="header">
+      New Task
     </div>
-    <div class="description">
-      Description:
-      <input type="text" id="description-input">
+    <div class="content">
+
+      <div class="ui form">
+        <div class="field">
+          <label>Title</label>
+          <input type="text" placeholder="enter a title..." id="title-input">
+        </div>
+        <div class="field">
+          <label>Description</label>
+          <textarea id="description-input" placeholder="enter a description..."></textarea>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="actions">
-    <div class="ui blue inverted ok button" id="save-task">Create Task</div>
-  </div>
+
+    <div class="actions">
+      <div class="ui blue inverted ok button" id="save-task">Create Task</div>
+    </div>
   </div><!--end modal-->
 </template>

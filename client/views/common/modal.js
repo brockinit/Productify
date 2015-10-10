@@ -4,7 +4,7 @@ Template.modal.rendered = function() {
       onApprove : function () {
         var titleInput = $('#title-input').val();
         var descriptionInput = $('#description-input').val();
-        Tasks.insert({ title : titleInput, description : descriptionInput, loc : 1 });
+        Tasks.insert({ title : titleInput, description : descriptionInput, loc : 1, author : Meteor.user().username });
       }
     });
 }
