@@ -32,11 +32,6 @@ Template.dashboardLayout.events({
   'click #user-profile' : function(event, template) {
     event.preventDefault();
     Router.go('/profile/edit/');
-  },
-  'click #log-out' : function(event, template) {
-    event.preventDefault();
-    Meteor.logout();
-    Router.go('/');
   }
 });
 

@@ -23,3 +23,28 @@ Template.modal.events({
     $('.ui.task.modal').modal('show');
   }
 });
+
+Template.logoutmodal.rendered = function() {
+  $('.ui.basic.modal')
+    .modal({
+      onApprove : function () {
+        Meteor.logout();
+        Router.go('/');
+      }
+    });
+}
+
+Template.logoutmodal.created = function() {
+
+}
+
+Template.logoutmodal.destroyed = function() {
+
+}
+
+Template.logoutmodal.events({
+  'click #log-out' : function(event, template) {
+    event.preventDefault();
+    $('.ui.basic.modal').modal('show');
+  }
+});

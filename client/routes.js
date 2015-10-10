@@ -2,10 +2,6 @@ Router.configure({
   layoutTemplate : 'applicationLayout'
 });
 
-AccountsTemplates.configure({
-  defaultLayout : 'introLayout'
-});
-
 Router.route('/', function () {
   //will render in {{> yield }} block
   this.render('introLayout');
@@ -31,9 +27,4 @@ Router.route('/profile/edit/', function() {
       };
     }
   });
-});
-
-Router.route('/newtask', function () {
-  //will render in {{> yield }} block
-  this.render('newTaskLayout');
 });

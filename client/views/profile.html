@@ -28,3 +28,16 @@
     </button>
   </div>
 </template>
+
+<template name="changePassword">
+  {{> header}}
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned center aligned grid">
+      <div class="column">
+          <div class="ui container">
+            {{> atForm state='changePwd'}}
+          </div>
+      </div>
+    </div>
+  </div>
+</template>
