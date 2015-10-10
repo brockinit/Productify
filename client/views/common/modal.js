@@ -1,10 +1,15 @@
 Template.modal.rendered = function() {
+  if($('.ui.task.modal').length > 1) {
+    $('.ui.task.modal')[1].remove();
+  }
   $('.ui.task.modal')
     .modal({
       onApprove : function () {
         var titleInput = $('#title-input').val();
         var descriptionInput = $('#description-input').val();
         Tasks.insert({ title : titleInput, description : descriptionInput, loc : 1, author : Meteor.user().username });
+        titleInput = '';
+        descriptionInput = '';
       }
     });
 }
@@ -25,6 +30,9 @@ Template.modal.events({
 });
 
 Template.logoutmodal.rendered = function() {
+  if($('.ui.basic.modal').length > 1) {
+    $('.ui.basic.modal')[1].remove();
+  }
   $('.ui.basic.modal')
     .modal({
       onApprove : function () {
