@@ -2,7 +2,7 @@ header {
   font-family: 'Exo', sans-serif;
   font-weight: 800;
 }
-
+/*
 body {
   height: 100%;
   width: 100%;
@@ -37,10 +37,37 @@ h3 {
   padding: 10px;
 }
 
-/*.center.item {
+.center.item {
   padding-right: 25px;
-}*/
-
+}
+*/
 #user-profile {
   margin-left: 75px;
+}
+
+html, body{
+  height: 100%;
+}
+
+.page-wrap{
+  min-height: 100%;
+  margin-bottom: -75px;
+}
+
+.page-wrap:after{
+  content: "";
+  display: block;
+}
+
+.form-page, .page-wrap:after{
+  height: 80px;
+}
+
+.form-page {
+  margin-top: 20px !important;
+  width: 100%;
+}
+
+.landing-page {
+  height: 72% !important;
 }

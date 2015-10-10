@@ -1,4 +1,4 @@
-<template name='applicationLayout'>
+<!-- <template name='applicationLayout'>
     <h2 class="ui center aligned icon header">
     <i class="tasks icon"></i>
       Productify
@@ -26,5 +26,58 @@
         </div>
     </div>
   </div>
+</template> -->
+
+<template name='applicationLayout'>
+    <div class="page-wrap">
+      {{> yield}}
+    </div>
+    {{> footer}}
+</template>
+
+<template name="introLayout">
+
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui fluid image">
+      <img src="https://static.pexels.com/photos/425/apple-iphone-desk-office.jpg" class="landing-page" alt="cool hipster stuff">
+    </div>
+    {{> header}}
+    <div class="ui inverted button scroll-force">
+      Sign In
+    </div>
+  </div>
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned center aligned grid">
+      <div class="column">
+          <div class="ui container">
+            {{> atForm }}
+          </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="footer">
+
+    <div class="ui inverted vertical footer segment form-page">
+    <div class="ui">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="center aligned column">
+        <button class="ui inverted blue icon button">
+          <i class="github alternate icon"></i>
+          <div class="header">GitHub</div>
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<template name="header">
+    <h2 class="ui center aligned icon header">
+      <i class="tasks icon"></i>
+      Productify
+    </h2>
 </template>
 

@@ -11,9 +11,8 @@ Template.introLayout.destroyed = function() {
 }
 
 Template.introLayout.events({
-  'click #login-buttons-password' : function(event, template) {
-    event.preventDefault();
-    Router.go('/dashboard/');
+  'click .scroll-force' : function(event, template) {
+  $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
   }
 });
 

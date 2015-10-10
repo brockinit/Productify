@@ -44,7 +44,8 @@ Template.dashboardLayout.events({
     Router.go('/');
   },
   'click #save-task' : function(event, template) {
-    //event.preventDefault();
+    event.preventDefault();
+    console.log('heyyy');
     var titleInput = $('#title-input').val();
     var descriptionInput = $('#description-input').val();
     Tasks.insert({ title : titleInput, description : descriptionInput, loc : 1 });
@@ -61,7 +62,7 @@ Template.task1.events({
 Template.task2.events({
   'click .nextStage' : function(event, template) {
     event.preventDefault();
-    Tasks.update( { _id : this._id }, { $set : { loc : 3 }} );
+    Tasks.update( { _id : this._id }, { $set : { loc : 3 } });
   }
 });
 
