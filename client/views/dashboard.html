@@ -1,62 +1,12 @@
 <template name="dashboardLayout">
-{{> header}}
-  <div class="ui large inverted pointing menu">
-      <div class="left item">
-        <div class="ui inverted huge header">
-          Ello there, {{currentUser.username}}
-        </div>
-        <a class="ui inverted blue button center aligned" id="user-profile">
-          Profile
-        </a>
-      </div>
-      <div class="center item">
-        {{> logoutmodal}}
-      </div>
-      <div class="right item">
-      {{> modal}}
-      </div>
-  </div>
-  <div id="content">
-    <div class="ui stackable divided equal height stackable grid">
-      <div class="three column row">
-        <div class="column">
-          <div class="ui center-aligned header">
-            <h2 class="taskHeader">To Do</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui center-aligned header">
-            <h2 class="taskHeader">In Progress</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui center-aligned header">
-            <h2 class="taskHeader">Done</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ui stackable very relaxed grid container">
-      <div class="three column computer one column mobile demo row">
+  {{> header}}
 
-        <div class="column">
-          <div class="container">
-            {{> todotasks}}
-          </div>
-        </div>
-        <div class="column">
-          <div class="container">
-            {{> inprogresstasks}}
-          </div>
-        </div>
-        <div class="column">
-          <div class="container">
-            {{> donetasks}}
-         </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {{> dashboardMenu}}
+
+  {{> dashboardHeader}}
+
+  {{> dashboardColumns}}
+
 </template>
 
 <template name="todotasks">
