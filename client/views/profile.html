@@ -1,9 +1,30 @@
 <template name="profileLayout">
-  <h2>Edit Info</h2>
-  <form class="edit">
-    <input type="text" id="username" placeholder="username">
-    <input type="text" id="password" placeholder="password">
-    <button id="save-changes">Save</button>
-    <button class="cancel">Back to Dashboard</button>
-  </form>
+  {{> header}}
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned center aligned grid">
+      <div class="column">
+          <div class="ui container">
+            {{> editInfo}}
+          </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="editInfo">
+  <div class="ui form">
+    <div class="field">
+      <label>Change Username</label>
+      <input type="text" placeholder="..." id="username">
+    </div>
+    <div class="field">
+      <label>Reset Password</label>
+      <input type="password" id="password" placeholder="...">
+    </div>
+    <button class="ui blue inverted button" id="save-changes">Save Changes</button>
+    <button class="ui blue inverted button cancel">
+      <i class="close icon cancel"></i>
+      Cancel
+    </button>
+  </div>
 </template>

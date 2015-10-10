@@ -19,6 +19,6 @@ Template.profileLayout.events({
     event.preventDefault();
     var userInput = $('#username').val();
     Meteor.users.update({ _id : Meteor.userId() }, { $set : { username : userInput } });
-    // Accounts.setUsername(Meteor.userId(), userInput);
+    Router.go('/dashboard/');
   }
 });
