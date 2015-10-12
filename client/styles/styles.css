@@ -2,45 +2,7 @@ header {
   font-family: 'Exo', sans-serif;
   font-weight: 800;
 }
-/*
-body {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color: #E1E1E1;
-}
 
-#login {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  height: 80%;
-}
-
-h3 {
-  text-align: center;
-}
-
-.footer.form-page {
-  position: absolute !important;
-  height: 8%;
-  bottom: 0;
-  width: 100%;
-}
-
-#new-task {
-  float: right;
-  padding: 5px;
-}
-
-#content {
-  padding: 10px;
-}
-
-.center.item {
-  padding-right: 25px;
-}
-*/
 #user-profile {
   margin-left: 75px;
 }
