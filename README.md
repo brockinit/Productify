@@ -1,2 +1,2 @@
-# kanban-krazy
+# Productify
 kanban-clone
