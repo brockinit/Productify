@@ -1,5 +1,7 @@
 Template.introLayout.rendered = function() {
-
+  if (Meteor.userId()) {
+    Router.go('/dashboard');
+  }
 }
 
 Template.introLayout.created = function() {
